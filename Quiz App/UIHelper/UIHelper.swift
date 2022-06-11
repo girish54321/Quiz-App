@@ -63,3 +63,11 @@ struct RightQuustionButtonStyle: ButtonStyle {
         .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }
+
+extension Image {
+    func imageModifier() -> some View {
+        self
+            .resizable()
+            .scaledToFit()
+    }
+}

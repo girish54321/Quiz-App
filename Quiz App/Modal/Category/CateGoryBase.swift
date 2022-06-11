@@ -12,8 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Json4Swift_Base : Codable {
-	let trivia_categories : [Trivia_categories]?
+struct CategoryBase : Codable {
+	let trivia_categories : [TriviaCategories]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -22,7 +22,7 @@ struct Json4Swift_Base : Codable {
 
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		trivia_categories = try values.decodeIfPresent([Trivia_categories].self, forKey: .trivia_categories)
+		trivia_categories = try values.decodeIfPresent([TriviaCategories].self, forKey: .trivia_categories)
 	}
 
 }

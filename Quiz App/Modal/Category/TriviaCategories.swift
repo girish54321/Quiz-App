@@ -12,7 +12,8 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Trivia_categories : Codable {
+struct TriviaCategories : Codable ,Identifiable, Hashable{
+//    var uuid = UUID()
 	let id : Int?
 	let name : String?
 

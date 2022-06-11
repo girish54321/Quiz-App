@@ -26,15 +26,15 @@ struct QuestionyType: Identifiable, Hashable {
 }
 
 let QuestionyTypeList: [QuestionyType] = [
-    QuestionyType(title: "Any Type", value: "Any Type"),
-    QuestionyType(title: "Multiple Choice", value: "Multiple Choice"),
-    QuestionyType(title: "True / False", value: "True / False")
+//    QuestionyType(title: "Any Type", value: "Any Type"),
+    QuestionyType(title: "Multiple Choice", value: "multiple"),
+    QuestionyType(title: "True / False", value: "boolean")
 ]
 
 let DifficultyList: [Difficulty] = [
-    Difficulty(title: "Easy", value: "Easy"),
-    Difficulty(title: "Medium", value: "Medium"),
-    Difficulty(title: "Hard", value: "Hard")
+    Difficulty(title: "Easy", value: "easy"),
+    Difficulty(title: "Medium", value: "medium"),
+    Difficulty(title: "Hard", value: "hard")
 ]
 
 let CategoryList: [Category] = [

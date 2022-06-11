@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (5.5.0)
+  - HTMLEntities (4.0.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - HTMLEntities (from `https://github.com/Kitura/swift-html-entities.git`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  HTMLEntities:
+    :git: https://github.com/Kitura/swift-html-entities.git
+
+CHECKOUT OPTIONS:
+  HTMLEntities:
+    :commit: d8ca73197f59ce260c71bd6d7f6eb8bbdccf508b
+    :git: https://github.com/Kitura/swift-html-entities.git
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  HTMLEntities: 4baa0d4e9cffcadb10d38b8b5d758f9e65f6d166
+
+PODFILE CHECKSUM: 8e97e204c048e90207c16fc7159efd5effd1d18c
+
+COCOAPODS: 1.11.2
