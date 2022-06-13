@@ -14,6 +14,9 @@
 		F430ED4028538B7C004A8241 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F430ED3F28538B7C004A8241 /* Preview Assets.xcassets */; };
 		F430ED4828538BDA004A8241 /* QuizConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430ED4728538BDA004A8241 /* QuizConfig.swift */; };
 		F430ED4B28539151004A8241 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430ED4A28539151004A8241 /* DataModal.swift */; };
+		F462138828574C2900E1BEAF /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138728574C2900E1BEAF /* GlobalState.swift */; };
+		F462138B28574CC000E1BEAF /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138A28574CC000E1BEAF /* LoadingIndicator.swift */; };
+		F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138E28574F7600E1BEAF /* WelcomeScreen.swift */; };
 		F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C53F28545C9600C404AE /* UIHelper.swift */; };
 		F4A2C54228545D0800C404AE /* QuziScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuziScreen.swift */; };
 		F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */; };
@@ -35,6 +38,9 @@
 		F430ED3F28538B7C004A8241 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F430ED4728538BDA004A8241 /* QuizConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizConfig.swift; sourceTree = "<group>"; };
 		F430ED4A28539151004A8241 /* DataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModal.swift; sourceTree = "<group>"; };
+		F462138728574C2900E1BEAF /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
+		F462138A28574CC000E1BEAF /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		F462138E28574F7600E1BEAF /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		F4A2C53F28545C9600C404AE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F4A2C54128545D0800C404AE /* QuziScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuziScreen.swift; sourceTree = "<group>"; };
 		F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 		F430ED3728538B79004A8241 /* Quiz App */ = {
 			isa = PBXGroup;
 			children = (
+				F462138928574CB600E1BEAF /* View */,
+				F462138628574C1800E1BEAF /* GlobalState */,
 				F4A2C54928546D8300C404AE /* Data */,
 				F4A2C53E28545C6C00C404AE /* UIHelper */,
 				F430ED4928539141004A8241 /* Modal */,
@@ -120,6 +128,7 @@
 			children = (
 				F430ED4728538BDA004A8241 /* QuizConfig.swift */,
 				F4A2C54128545D0800C404AE /* QuziScreen.swift */,
+				F462138E28574F7600E1BEAF /* WelcomeScreen.swift */,
 			);
 			path = screen;
 			sourceTree = "<group>";
@@ -132,6 +141,22 @@
 				F430ED4A28539151004A8241 /* DataModal.swift */,
 			);
 			path = Modal;
+			sourceTree = "<group>";
+		};
+		F462138628574C1800E1BEAF /* GlobalState */ = {
+			isa = PBXGroup;
+			children = (
+				F462138728574C2900E1BEAF /* GlobalState.swift */,
+			);
+			path = GlobalState;
+			sourceTree = "<group>";
+		};
+		F462138928574CB600E1BEAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F462138A28574CC000E1BEAF /* LoadingIndicator.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F4A2C53E28545C6C00C404AE /* UIHelper */ = {
@@ -286,8 +311,11 @@
 			files = (
 				F4A2C54228545D0800C404AE /* QuziScreen.swift in Sources */,
 				F430ED3B28538B79004A8241 /* ContentView.swift in Sources */,
+				F462138828574C2900E1BEAF /* GlobalState.swift in Sources */,
 				F4D295942854C063002F4219 /* Questions.swift in Sources */,
+				F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */,
 				F430ED4B28539151004A8241 /* DataModal.swift in Sources */,
+				F462138B28574CC000E1BEAF /* LoadingIndicator.swift in Sources */,
 				F430ED4828538BDA004A8241 /* QuizConfig.swift in Sources */,
 				F4D295932854C063002F4219 /* Results.swift in Sources */,
 				F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */,

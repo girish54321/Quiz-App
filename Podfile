@@ -8,5 +8,6 @@ target 'Quiz App' do
   # Pods for Quiz App
   pod 'Alamofire'
   pod 'HTMLEntities', :git => 'https://github.com/Kitura/swift-html-entities.git'
+  pod 'ActivityIndicatorView'
 
 end

@@ -1,13 +1,16 @@
 PODS:
+  - ActivityIndicatorView (1.1.0)
   - Alamofire (5.5.0)
   - HTMLEntities (4.0.1)
 
 DEPENDENCIES:
+  - ActivityIndicatorView
   - Alamofire
   - HTMLEntities (from `https://github.com/Kitura/swift-html-entities.git`)
 
 SPEC REPOS:
   trunk:
+    - ActivityIndicatorView
     - Alamofire
 
 EXTERNAL SOURCES:
@@ -20,9 +23,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/Kitura/swift-html-entities.git
 
 SPEC CHECKSUMS:
+  ActivityIndicatorView: 2a73f96feeb64c8583a0a9dfeeee27ddb8f71b4d
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   HTMLEntities: 4baa0d4e9cffcadb10d38b8b5d758f9e65f6d166
 
-PODFILE CHECKSUM: 8e97e204c048e90207c16fc7159efd5effd1d18c
+PODFILE CHECKSUM: 3da9fdb7c7f2bc2da71291a2b67872d08aac09ac
 
 COCOAPODS: 1.11.2

@@ -20,6 +20,7 @@ struct QuizConfig: View {
     @State private var quiaData: QuestionsBase?
     
     @State private var isShowingDetailView = false
+    @EnvironmentObject var appStateStorage: AppStateStorage
     
     var body: some View {
         VStack {
@@ -63,22 +64,21 @@ struct QuizConfig: View {
     }
     
     func getQutions() {
+        appStateStorage.isLoadingViewShowing = true
         let parameters: [String: Any] = [
             "amount" : name,
             "category": categoryList[selection].id!,
             "difficulty": selectedDifficulty.value,
             "type" : selectedQuestionyType.value
         ]
-        print(parameters)
         AF.request("https://opentdb.com/api.php",method: .get,parameters: parameters).validate().responseDecodable(of: QuestionsBase.self) { (response) in
+            appStateStorage.isLoadingViewShowing = false
             guard let data = response.value else {
                 return
             }
             if (data.response_code != 0){
-                print("error")
                 return
             }
-            print(data)
             withAnimation {
                 quiaData = data
                 isShowingDetailView = true
@@ -87,7 +87,9 @@ struct QuizConfig: View {
     }
     
     func getCategory()  {
+        appStateStorage.isLoadingViewShowing = true
         AF.request("https://opentdb.com/api_category.php",method: .get).validate().responseDecodable(of: CategoryBase.self) { (response) in
+            appStateStorage.isLoadingViewShowing = false
             guard let data = response.value else {
                 return
             }

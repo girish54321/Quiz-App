@@ -53,12 +53,10 @@ struct QuziScreen: View {
                             lastAnswer = item!
                         }
                         if(isRight == true){
-                            print("Right Ans")
                             withAnimation {
                                 totalScrore += 10
                             }
                         } else {
-                            print("worng")
                         }
                         goToNextQution()
                     }, label: {
@@ -82,7 +80,6 @@ struct QuziScreen: View {
                     .padding(.top,22)
             }
             .onChange(of: currentIndex) { newValue in
-                print(currentIndex)
                 withAnimation {
                     currentIndex = newValue
                 }
@@ -94,12 +91,11 @@ struct QuziScreen: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
                 Button("Exit") {
-                    print("Help tapped!")
                 }
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Skip") {
-                    print("Help tapped!")
+                    goToNextQution()
                 }
             }
         }
