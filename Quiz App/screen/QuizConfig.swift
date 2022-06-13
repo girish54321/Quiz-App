@@ -12,7 +12,7 @@ struct QuizConfig: View {
     @State private var selection = 1
     
     @State private var selectedDifficulty: Difficulty = DifficultyList[0]
-    @State private var selectedQuestionyType: QuestionyType = QuestionyTypeList[0]
+    @State private var selectedQuestionsType: QuestionsType = QuestionsTypeList[0]
     @State private var name = "10"
     
     @State private var categoryList: [TriviaCategories] = []
@@ -24,7 +24,7 @@ struct QuizConfig: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: QuziScreen(quiaData: quiaData), isActive: $isShowingDetailView) { EmptyView() }
+            NavigationLink(destination: QuizScreen(quiaData: quiaData), isActive: $isShowingDetailView) { EmptyView() }
             Form {
                 Section(header: Text("Create your quiz")){
                     TextField("Number of Questions", text: $name).keyboardType(.numberPad)
@@ -39,8 +39,8 @@ struct QuizConfig: View {
                             Text(item.title)
                         }
                     }
-                    Picker("Select Type", selection: $selectedQuestionyType.id) {
-                        ForEach(QuestionyTypeList) { item in
+                    Picker("Select Type", selection: $selectedQuestionsType.id) {
+                        ForEach(QuestionsTypeList) { item in
                             Text(item.title)
                             
                         }
@@ -48,7 +48,7 @@ struct QuizConfig: View {
                 }
             }
             Button(action: {
-                getQutions()
+                getQuestions()
             }, label: {
                 Text("Click Me")
             })
@@ -63,13 +63,13 @@ struct QuizConfig: View {
         .navigationTitle("Trivia API")
     }
     
-    func getQutions() {
+    func getQuestions() {
         appStateStorage.isLoadingViewShowing = true
         let parameters: [String: Any] = [
             "amount" : name,
             "category": categoryList[selection].id!,
             "difficulty": selectedDifficulty.value,
-            "type" : selectedQuestionyType.value
+            "type" : selectedQuestionsType.value
         ]
         AF.request("https://opentdb.com/api.php",method: .get,parameters: parameters).validate().responseDecodable(of: QuestionsBase.self) { (response) in
             appStateStorage.isLoadingViewShowing = false

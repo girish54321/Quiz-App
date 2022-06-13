@@ -18,7 +18,7 @@
 		F462138B28574CC000E1BEAF /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138A28574CC000E1BEAF /* LoadingIndicator.swift */; };
 		F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138E28574F7600E1BEAF /* WelcomeScreen.swift */; };
 		F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C53F28545C9600C404AE /* UIHelper.swift */; };
-		F4A2C54228545D0800C404AE /* QuziScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuziScreen.swift */; };
+		F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuizScreen.swift */; };
 		F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */; };
 		F4A2C54B28546DA700C404AE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4A2C54A28546DA700C404AE /* data.json */; };
 		F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */; };
@@ -42,7 +42,7 @@
 		F462138A28574CC000E1BEAF /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		F462138E28574F7600E1BEAF /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		F4A2C53F28545C9600C404AE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
-		F4A2C54128545D0800C404AE /* QuziScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuziScreen.swift; sourceTree = "<group>"; };
+		F4A2C54128545D0800C404AE /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
 		F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		F4A2C54A28546DA700C404AE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaCategories.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				F430ED4728538BDA004A8241 /* QuizConfig.swift */,
-				F4A2C54128545D0800C404AE /* QuziScreen.swift */,
+				F4A2C54128545D0800C404AE /* QuizScreen.swift */,
 				F462138E28574F7600E1BEAF /* WelcomeScreen.swift */,
 			);
 			path = screen;
@@ -309,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A2C54228545D0800C404AE /* QuziScreen.swift in Sources */,
+				F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */,
 				F430ED3B28538B79004A8241 /* ContentView.swift in Sources */,
 				F462138828574C2900E1BEAF /* GlobalState.swift in Sources */,
 				F4D295942854C063002F4219 /* Questions.swift in Sources */,
@@ -457,6 +457,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +469,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -486,6 +487,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -497,7 +499,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

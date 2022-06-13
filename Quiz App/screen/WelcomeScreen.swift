@@ -17,7 +17,7 @@ struct WelcomeScreen: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: QuziScreen(quiaData: quiaData), isActive: $isShowingDetailView) { EmptyView() }
+                NavigationLink(destination: QuizScreen(quiaData: quiaData), isActive: $isShowingDetailView) { EmptyView() }
                 Spacer()
                 NavigationLink(destination: QuizConfig()) {
                     VStack(alignment: .center, spacing: 22) {

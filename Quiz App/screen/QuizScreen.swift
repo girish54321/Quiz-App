@@ -8,12 +8,12 @@
 import SwiftUI
 import HTMLEntities
 
-struct QuziScreen: View {
+struct QuizScreen: View {
     
     var quiaData: QuestionsBase?
     @State private var currentIndex = 0
     @State private var lastAnswer = ""
-    @State private var totalScrore = 0
+    @State private var totalScore = 0
     
     var body: some View {
         ScrollView {
@@ -54,11 +54,11 @@ struct QuziScreen: View {
                         }
                         if(isRight == true){
                             withAnimation {
-                                totalScrore += 10
+                                totalScore += 10
                             }
                         } else {
                         }
-                        goToNextQution()
+                        goToNextQuestion()
                     }, label: {
                         HStack {
                             Spacer()
@@ -72,7 +72,7 @@ struct QuziScreen: View {
                         .cornerRadius(8)
                     })
                 }
-                Text("\(totalScrore)/%")
+                Text("\(totalScore)/%")
                     .font(.largeTitle)
                     .foregroundColor(.green)
                     .fontWeight(.heavy)
@@ -95,14 +95,14 @@ struct QuziScreen: View {
             }
             ToolbarItem(placement: .navigationBarTrailing) {
                 Button("Skip") {
-                    goToNextQution()
+                    goToNextQuestion()
                 }
             }
         }
         
     }
     
-    func goToNextQution(){
+    func goToNextQuestion(){
         if((quiaData?.results!.count)! - 1 == currentIndex){
             return
         }
@@ -114,8 +114,8 @@ struct QuziScreen: View {
     }
 }
 
-struct QuziScreen_Previews: PreviewProvider {
+struct QuizScreen_Previews: PreviewProvider {
     static var previews: some View {
-        QuziScreen()
+        QuizScreen()
     }
 }

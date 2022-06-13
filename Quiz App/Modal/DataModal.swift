@@ -19,16 +19,16 @@ struct Difficulty: Identifiable, Hashable {
     var value: String
 }
 
-struct QuestionyType: Identifiable, Hashable {
+struct QuestionsType: Identifiable, Hashable {
     var id = UUID()
     var title: String
     var value: String
 }
 
-let QuestionyTypeList: [QuestionyType] = [
+let QuestionsTypeList: [QuestionsType] = [
 //    QuestionyType(title: "Any Type", value: "Any Type"),
-    QuestionyType(title: "Multiple Choice", value: "multiple"),
-    QuestionyType(title: "True / False", value: "boolean")
+    QuestionsType(title: "Multiple Choice", value: "multiple"),
+    QuestionsType(title: "True / False", value: "boolean")
 ]
 
 let DifficultyList: [Difficulty] = [
