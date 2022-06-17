@@ -18,6 +18,9 @@
 		F462138B28574CC000E1BEAF /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138A28574CC000E1BEAF /* LoadingIndicator.swift */; };
 		F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138E28574F7600E1BEAF /* WelcomeScreen.swift */; };
 		F462139128576AB200E1BEAF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462139028576AB200E1BEAF /* Launch Screen.storyboard */; };
+		F46B6835285CA067005BC4AC /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B6834285CA067005BC4AC /* LottieView.swift */; };
+		F46B6838285CA0AB005BC4AC /* passed.json in Resources */ = {isa = PBXBuildFile; fileRef = F46B6837285CA0AA005BC4AC /* passed.json */; };
+		F46B683A285CA0DE005BC4AC /* LottieFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B6839285CA0DE005BC4AC /* LottieFileView.swift */; };
 		F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C53F28545C9600C404AE /* UIHelper.swift */; };
 		F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuizScreen.swift */; };
 		F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */; };
@@ -43,6 +46,9 @@
 		F462138A28574CC000E1BEAF /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		F462138E28574F7600E1BEAF /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		F462139028576AB200E1BEAF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F46B6834285CA067005BC4AC /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		F46B6837285CA0AA005BC4AC /* passed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = passed.json; sourceTree = "<group>"; };
+		F46B6839285CA0DE005BC4AC /* LottieFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieFileView.swift; sourceTree = "<group>"; };
 		F4A2C53F28545C9600C404AE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F4A2C54128545D0800C404AE /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
 		F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 		F430ED3728538B79004A8241 /* Quiz App */ = {
 			isa = PBXGroup;
 			children = (
+				F46B6836285CA09D005BC4AC /* Files */,
 				F462138928574CB600E1BEAF /* View */,
 				F462138628574C1800E1BEAF /* GlobalState */,
 				F4A2C54928546D8300C404AE /* Data */,
@@ -158,8 +165,18 @@
 			isa = PBXGroup;
 			children = (
 				F462138A28574CC000E1BEAF /* LoadingIndicator.swift */,
+				F46B6834285CA067005BC4AC /* LottieView.swift */,
+				F46B6839285CA0DE005BC4AC /* LottieFileView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F46B6836285CA09D005BC4AC /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				F46B6837285CA0AA005BC4AC /* passed.json */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 		F4A2C53E28545C6C00C404AE /* UIHelper */ = {
@@ -260,6 +277,7 @@
 				F4A2C54B28546DA700C404AE /* data.json in Resources */,
 				F430ED4028538B7C004A8241 /* Preview Assets.xcassets in Resources */,
 				F462139128576AB200E1BEAF /* Launch Screen.storyboard in Resources */,
+				F46B6838285CA0AB005BC4AC /* passed.json in Resources */,
 				F430ED3D28538B7C004A8241 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,6 +333,7 @@
 			files = (
 				F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */,
 				F430ED3B28538B79004A8241 /* ContentView.swift in Sources */,
+				F46B6835285CA067005BC4AC /* LottieView.swift in Sources */,
 				F462138828574C2900E1BEAF /* GlobalState.swift in Sources */,
 				F4D295942854C063002F4219 /* Questions.swift in Sources */,
 				F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */,
@@ -323,6 +342,7 @@
 				F430ED4828538BDA004A8241 /* QuizConfig.swift in Sources */,
 				F4D295932854C063002F4219 /* Results.swift in Sources */,
 				F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */,
+				F46B683A285CA0DE005BC4AC /* LottieFileView.swift in Sources */,
 				F430ED3928538B79004A8241 /* Quiz_AppApp.swift in Sources */,
 				F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */,
 				F4D2958F2854B6EF002F4219 /* CateGoryBase.swift in Sources */,
