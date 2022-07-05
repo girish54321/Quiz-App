@@ -10,7 +10,7 @@ import HTMLEntities
 
 struct QuizScreen: View {
     
-    var quiaData: QuestionsBase? = Bundle.main.decode("data.json")
+    @State var quiaData: QuestionsBase? = Bundle.main.decode("data.json")
     @State private var currentIndex = 0
     @State private var lastAnswer = ""
     @State private var totalScore = 0
@@ -39,7 +39,7 @@ struct QuizScreen: View {
                                     .padding()
                                     Spacer()
                                 }
-                                .frame(minWidth: 200, idealWidth: 200, maxWidth: 500, minHeight: 200, idealHeight: 200, maxHeight: 160, alignment: .center)
+                                .frame(minWidth: 200, idealWidth: 200, maxWidth: 500, minHeight: 200, idealHeight: 200,  alignment: .center)
                                 .background(Color.indigo)
                                 .cornerRadius(8)
                                 .padding()
@@ -51,12 +51,12 @@ struct QuizScreen: View {
                         .indexViewStyle(.page(backgroundDisplayMode: .always))
                     }
                     VStack(spacing:24){
-                        ForEach((quiaData?.results![currentIndex].incorrect_answers! ?? [""]) + [quiaData?.results![currentIndex].correct_answer],id:\.self) { item in
+                        ForEach((quiaData?.results?[currentIndex].incorrect_answers! ?? [""]) ,id:\.self) { item in
                             let correctAnswer = quiaData?.results![currentIndex].correct_answer
                             let isRight = item == correctAnswer ? true : false
                             Button(action: {
                                 withAnimation {
-                                    lastAnswer = item!
+                                    lastAnswer = item
                                 }
                                 if(isRight == true){
                                     withAnimation {
@@ -70,13 +70,14 @@ struct QuizScreen: View {
                             }, label: {
                                 HStack {
                                     Spacer()
-                                    Text(item!)
+                                    Text(item)
                                         .fontWeight(.semibold)
                                         .foregroundColor(.white)
                                     Spacer()
                                 }
                                 .frame(minWidth: 200, idealWidth: 200, maxWidth: 500, minHeight: 50, idealHeight: 50, maxHeight: 50, alignment: .center)
-                                .background(lastAnswer == item ? isRight ? Color.green : Color.red : Color.indigo)
+                                .background(lastAnswer == item ? isRight ? Color.green : Color.red : disabled && item == correctAnswer ?  Color.green : Color.indigo
+                                )
                                 .cornerRadius(8)
                             })
                         }
@@ -112,7 +113,13 @@ struct QuizScreen: View {
                 LottieView(action: goBack)
             }
         }
-        
+        .onAppear {
+            for (index, element) in quiaData!.results!.enumerated() {
+                let rightAns = quiaData?.results![index].correct_answer
+                quiaData!.results![index].incorrect_answers!.append(rightAns ?? "404")
+                quiaData!.results![index].incorrect_answers = quiaData!.results![index].incorrect_answers!.shuffled()
+            }
+        }
     }
     
     func goBack () {
