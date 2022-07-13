@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import HTMLEntities
 
 struct QuizScreen: View {
     
@@ -26,19 +25,10 @@ struct QuizScreen: View {
                     VStack (alignment: .center, spacing: 22) {
                         TabView(selection: $currentIndex){
                             ForEach ((quiaData?.results?.indices)!,id:\.self) { item in
-                                HStack {
-                                    VStack (alignment: .leading,spacing: 18) {
-                                        Text("Difficulty: \(quiaData!.results![item].difficulty!.uppercased())")
-                                            .font(.headline)
-                                            .foregroundColor(.white)
-                                        Text("\(quiaData?.results![item].question! ?? "")".htmlUnescape())
-                                            .fontWeight(.heavy)
-                                            .tag(item)
-                                            .foregroundColor(.white)
-                                    }
-                                    .padding()
-                                    Spacer()
-                                }
+                                Quxtionview(
+                                    difficulty:quiaData!.results![item].difficulty!,
+                                    mainText:"\(quiaData?.results![item].question! ?? "")")
+                                .tag(item)
                                 .frame(minWidth: 200, idealWidth: 200, maxWidth: 500, minHeight: 200, idealHeight: 200,  alignment: .center)
                                 .background(Color.indigo)
                                 .cornerRadius(8)
@@ -70,7 +60,7 @@ struct QuizScreen: View {
                             }, label: {
                                 HStack {
                                     Spacer()
-                                    Text(item)
+                                    Text(UIHelper().formateHelptext(text: item))
                                         .fontWeight(.semibold)
                                         .foregroundColor(.white)
                                     Spacer()
@@ -99,13 +89,9 @@ struct QuizScreen: View {
                 .navigationTitle(quiaData?.results![currentIndex].category! ?? "")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        Button("Exit") {
-                        }
-                    }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Skip") {
-                            goToNextQuestion()
+                            goToNextQuestion(withTimer: false)
                         }
                     }
                 }
@@ -114,7 +100,7 @@ struct QuizScreen: View {
             }
         }
         .onAppear {
-            for (index, element) in quiaData!.results!.enumerated() {
+            for (index, _) in quiaData!.results!.enumerated() {
                 let rightAns = quiaData?.results![index].correct_answer
                 quiaData!.results![index].incorrect_answers!.append(rightAns ?? "404")
                 quiaData!.results![index].incorrect_answers = quiaData!.results![index].incorrect_answers!.shuffled()
@@ -126,7 +112,7 @@ struct QuizScreen: View {
         print("Go back")
     }
     
-    func goToNextQuestion(){
+    func goToNextQuestion(withTimer: Bool = true){
         if(isLastQuestion()){
             withAnimation {
                 disabled = true
@@ -134,17 +120,45 @@ struct QuizScreen: View {
             }
             return
         }
+        
+        if(!withTimer) {
+            moveToNext()
+            return
+        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            withAnimation {
-                currentIndex += 1
-                lastAnswer = ""
-                disabled = false
-            }
+            moveToNext()
+        }
+    }
+    
+    func moveToNext() {
+        withAnimation {
+            currentIndex += 1
+            lastAnswer = ""
+            disabled = false
         }
     }
     
     func isLastQuestion() -> Bool {
         return ((quiaData?.results!.count)! - 1 == currentIndex) ? true : false
+    }
+    
+    struct Quxtionview: View {
+        var difficulty: String?
+        var mainText: String?
+        var body: some View {
+            HStack {
+                VStack (alignment: .leading,spacing: 18) {
+                    Text("Difficulty: \(difficulty!.uppercased())")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    Text(UIHelper().formateHelptext(text: mainText ?? ""))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                }
+                .padding()
+                Spacer()
+            }
+        }
     }
 }
 
