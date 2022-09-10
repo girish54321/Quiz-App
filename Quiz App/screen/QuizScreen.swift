@@ -114,9 +114,11 @@ struct QuizScreen: View {
     
     func goToNextQuestion(withTimer: Bool = true){
         if(isLastQuestion()){
-            withAnimation {
-                disabled = true
-                completed = true
+          DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                withAnimation {
+                    disabled = true
+                    completed = true
+                }
             }
             return
         }
