@@ -8,37 +8,37 @@
 import SwiftUI
 
 struct WidgetView: View {
+    var score: String
     var body: some View {
         VStack {
             HStack {
-                Text("You Highest Scorer")
-                    .font(.headline)
-                    .padding()
+                Text("Highest Scorer")
+                    .font(.body)
                 Spacer()
-                Text("23")
-                    .font(.headline)
+                Text(score)
+                    .font(.title2)
+                    .fontWeight(.heavy)
                     .foregroundColor(Color.indigo)
-                    .padding()
             }
+            .padding()
             Spacer()
             HStack {
                 Image("select").resizable()
                     .aspectRatio(contentMode: .fit)
-                .frame(width: 70, height: 70)
-                .padding()
+                .frame(width: 45, height: 45)
                 Spacer()
+                Text("Quiz App")
+                    .font(.footnote)
+                    .foregroundColor(Color.indigo)
+                    .fontWeight(.semibold)
             }
+            .padding()
         }
-        .background(.gray)
-     
-//            .clipShape(Circle())
-//            .overlay(Circle().stroke(Color.purple,lineWidth: 5))
-//            .shadow(radius: 15)
     }
 }
 
 struct WidgetView_Previews: PreviewProvider {
     static var previews: some View {
-        WidgetView()
+        WidgetView(score: "22")
     }
 }

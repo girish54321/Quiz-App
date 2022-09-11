@@ -59,32 +59,7 @@ struct Quiz_App_widgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-//        Text(entry.date, style: .time)
-//        WidgetView()
-        VStack {
-            HStack {
-                Text("You Highest Scorer")
-                    .font(.body)
-                Spacer()
-                Text(entry.appData.score)
-                    .font(.title2)
-                    .foregroundColor(Color.indigo)
-            }
-            .padding()
-            Spacer()
-            HStack {
-                Image("select").resizable()
-                    .aspectRatio(contentMode: .fit)
-                .frame(width: 45, height: 45)
-                Spacer()
-                Text("Quiz App")
-                    .font(.footnote)
-                    .foregroundColor(Color.indigo)
-                    .fontWeight(.semibold)
-            }
-            .padding()
-        }
-       
+        WidgetView(score: entry.appData.score)
     }
 }
 
