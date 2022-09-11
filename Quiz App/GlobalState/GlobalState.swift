@@ -12,7 +12,7 @@ class AppStateStorage: ObservableObject {
     @Published var isLoadingViewShowing : Bool = false
     @Published var userScore: HighScore = HighScore(score: "0", scoreNumber: 0)
     @AppStorage(appStorageKey, store: UserDefaults(suiteName: appStorageKey))
-    var heroData : Data = Data()
+    var appData : Data = Data()
     
     init() {
         print("i will updagt the mark i am the best")
@@ -20,7 +20,7 @@ class AppStateStorage: ObservableObject {
     }
     
     func getUserScore(){
-        if let data = try? JSONDecoder().decode(HighScore.self, from: heroData) {
+        if let data = try? JSONDecoder().decode(HighScore.self, from: appData) {
             updateUserScore(data: data)
         }
     }
@@ -33,8 +33,8 @@ class AppStateStorage: ObservableObject {
     
     func updateUserScore(data: HighScore){
         if let userData = try? JSONEncoder().encode(data) {
-            self.heroData = userData
-            WidgetCenter.shared.reloadTimelines(ofKind: "Hero_Widget")
+            self.appData = userData
+            WidgetCenter.shared.reloadTimelines(ofKind: "Quiz_App_widget")
         }
         withAnimation {
             userScore = data
