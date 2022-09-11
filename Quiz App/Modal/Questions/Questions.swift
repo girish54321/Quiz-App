@@ -14,7 +14,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 struct QuestionsBase : Codable {
 	let response_code : Int?
-	let results : [Results]?
+    var results : [Results]?
 
 	enum CodingKeys: String, CodingKey {
 

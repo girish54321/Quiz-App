@@ -2,16 +2,19 @@ PODS:
   - ActivityIndicatorView (1.1.0)
   - Alamofire (5.5.0)
   - HTMLEntities (4.0.1)
+  - lottie-ios (3.3.0)
 
 DEPENDENCIES:
   - ActivityIndicatorView
   - Alamofire
   - HTMLEntities (from `https://github.com/Kitura/swift-html-entities.git`)
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
     - ActivityIndicatorView
     - Alamofire
+    - lottie-ios
 
 EXTERNAL SOURCES:
   HTMLEntities:
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   ActivityIndicatorView: 2a73f96feeb64c8583a0a9dfeeee27ddb8f71b4d
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
   HTMLEntities: 4baa0d4e9cffcadb10d38b8b5d758f9e65f6d166
+  lottie-ios: 6ac74dcc09904798f59b18cb3075c089d76be9ae
 
-PODFILE CHECKSUM: 3da9fdb7c7f2bc2da71291a2b67872d08aac09ac
+PODFILE CHECKSUM: cbf392ea736d83318be6d96624d6470648af187c
 
 COCOAPODS: 1.11.2

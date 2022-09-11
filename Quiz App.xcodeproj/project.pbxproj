@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		4DE751E5D5AC097DA2F6304E /* Pods_Quiz_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAB01ABFFDBA27AACF76073 /* Pods_Quiz_App.framework */; };
+		F401F42028CDE68F00832823 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F401F41F28CDE68F00832823 /* WidgetKit.framework */; };
+		F401F42228CDE68F00832823 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F401F42128CDE68F00832823 /* SwiftUI.framework */; };
+		F401F42528CDE68F00832823 /* Quiz_App_widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401F42428CDE68F00832823 /* Quiz_App_widget.swift */; };
+		F401F42828CDE69000832823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F401F42728CDE69000832823 /* Assets.xcassets */; };
+		F401F42A28CDE69000832823 /* Quiz_App_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F401F42628CDE68F00832823 /* Quiz_App_widget.intentdefinition */; };
+		F401F42B28CDE69000832823 /* Quiz_App_widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F401F42628CDE68F00832823 /* Quiz_App_widget.intentdefinition */; };
+		F401F42E28CDE69000832823 /* Quiz-App-widgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F401F41E28CDE68F00832823 /* Quiz-App-widgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F401F43528CDE6FC00832823 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401F43428CDE6FC00832823 /* WidgetView.swift */; };
+		F401F43628CDE6FC00832823 /* WidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401F43428CDE6FC00832823 /* WidgetView.swift */; };
+		F401F43728CDEAF900832823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F430ED3C28538B7C004A8241 /* Assets.xcassets */; };
 		F430ED3928538B79004A8241 /* Quiz_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430ED3828538B79004A8241 /* Quiz_AppApp.swift */; };
 		F430ED3B28538B79004A8241 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430ED3A28538B79004A8241 /* ContentView.swift */; };
 		F430ED3D28538B7C004A8241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F430ED3C28538B7C004A8241 /* Assets.xcassets */; };
@@ -18,20 +28,60 @@
 		F462138B28574CC000E1BEAF /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138A28574CC000E1BEAF /* LoadingIndicator.swift */; };
 		F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F462138E28574F7600E1BEAF /* WelcomeScreen.swift */; };
 		F462139128576AB200E1BEAF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F462139028576AB200E1BEAF /* Launch Screen.storyboard */; };
+		F46B6835285CA067005BC4AC /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B6834285CA067005BC4AC /* LottieView.swift */; };
+		F46B6838285CA0AB005BC4AC /* passed.json in Resources */ = {isa = PBXBuildFile; fileRef = F46B6837285CA0AA005BC4AC /* passed.json */; };
+		F46B683A285CA0DE005BC4AC /* LottieFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46B6839285CA0DE005BC4AC /* LottieFileView.swift */; };
 		F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C53F28545C9600C404AE /* UIHelper.swift */; };
 		F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuizScreen.swift */; };
 		F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */; };
 		F4A2C54B28546DA700C404AE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4A2C54A28546DA700C404AE /* data.json */; };
+		F4A9FCAB28CCE022005C57FB /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9FCAA28CCE022005C57FB /* HighScore.swift */; };
 		F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */; };
 		F4D2958F2854B6EF002F4219 /* CateGoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2958D2854B6EF002F4219 /* CateGoryBase.swift */; };
 		F4D295932854C063002F4219 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D295912854C062002F4219 /* Results.swift */; };
 		F4D295942854C063002F4219 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D295922854C062002F4219 /* Questions.swift */; };
+		F4FB101028CDEF6500325094 /* DataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F430ED4A28539151004A8241 /* DataModal.swift */; };
+		F4FB101128CDEFDA00325094 /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9FCAA28CCE022005C57FB /* HighScore.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F401F42C28CDE69000832823 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F430ED2D28538B79004A8241 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F401F41D28CDE68F00832823;
+			remoteInfo = "Quiz-App-widgetExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F401F43228CDE69000832823 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F401F42E28CDE69000832823 /* Quiz-App-widgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4CAB01ABFFDBA27AACF76073 /* Pods_Quiz_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Quiz_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DEE7F029515ADA69432963 /* Pods-Quiz App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz App.debug.xcconfig"; path = "Target Support Files/Pods-Quiz App/Pods-Quiz App.debug.xcconfig"; sourceTree = "<group>"; };
 		C4258FEC2FE8711A2129016C /* Pods-Quiz App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quiz App.release.xcconfig"; path = "Target Support Files/Pods-Quiz App/Pods-Quiz App.release.xcconfig"; sourceTree = "<group>"; };
+		F401F41928CDE5DA00832823 /* Quiz App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz App.entitlements"; sourceTree = "<group>"; };
+		F401F41E28CDE68F00832823 /* Quiz-App-widgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Quiz-App-widgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F401F41F28CDE68F00832823 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F401F42128CDE68F00832823 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F401F42428CDE68F00832823 /* Quiz_App_widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_App_widget.swift; sourceTree = "<group>"; };
+		F401F42628CDE68F00832823 /* Quiz_App_widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Quiz_App_widget.intentdefinition; sourceTree = "<group>"; };
+		F401F42728CDE69000832823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F401F42928CDE69000832823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F401F43328CDE6AA00832823 /* Quiz-App-widgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quiz-App-widgetExtension.entitlements"; sourceTree = "<group>"; };
+		F401F43428CDE6FC00832823 /* WidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetView.swift; sourceTree = "<group>"; };
 		F430ED3528538B79004A8241 /* Quiz App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F430ED3828538B79004A8241 /* Quiz_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppApp.swift; sourceTree = "<group>"; };
 		F430ED3A28538B79004A8241 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,10 +93,14 @@
 		F462138A28574CC000E1BEAF /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		F462138E28574F7600E1BEAF /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
 		F462139028576AB200E1BEAF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F46B6834285CA067005BC4AC /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		F46B6837285CA0AA005BC4AC /* passed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = passed.json; sourceTree = "<group>"; };
+		F46B6839285CA0DE005BC4AC /* LottieFileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieFileView.swift; sourceTree = "<group>"; };
 		F4A2C53F28545C9600C404AE /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F4A2C54128545D0800C404AE /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
 		F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		F4A2C54A28546DA700C404AE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F4A9FCAA28CCE022005C57FB /* HighScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaCategories.swift; sourceTree = "<group>"; };
 		F4D2958D2854B6EF002F4219 /* CateGoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateGoryBase.swift; sourceTree = "<group>"; };
 		F4D295912854C062002F4219 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -54,6 +108,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F401F41B28CDE68F00832823 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F401F42228CDE68F00832823 /* SwiftUI.framework in Frameworks */,
+				F401F42028CDE68F00832823 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F430ED3228538B79004A8241 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,15 +141,30 @@
 			isa = PBXGroup;
 			children = (
 				4CAB01ABFFDBA27AACF76073 /* Pods_Quiz_App.framework */,
+				F401F41F28CDE68F00832823 /* WidgetKit.framework */,
+				F401F42128CDE68F00832823 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F401F42328CDE68F00832823 /* Quiz-App-widget */ = {
+			isa = PBXGroup;
+			children = (
+				F401F42428CDE68F00832823 /* Quiz_App_widget.swift */,
+				F401F42628CDE68F00832823 /* Quiz_App_widget.intentdefinition */,
+				F401F42728CDE69000832823 /* Assets.xcassets */,
+				F401F42928CDE69000832823 /* Info.plist */,
+			);
+			path = "Quiz-App-widget";
 			sourceTree = "<group>";
 		};
 		F430ED2C28538B79004A8241 = {
 			isa = PBXGroup;
 			children = (
+				F401F43328CDE6AA00832823 /* Quiz-App-widgetExtension.entitlements */,
 				F462139028576AB200E1BEAF /* Launch Screen.storyboard */,
 				F430ED3728538B79004A8241 /* Quiz App */,
+				F401F42328CDE68F00832823 /* Quiz-App-widget */,
 				F430ED3628538B79004A8241 /* Products */,
 				3F87CAA353107A67DB129715 /* Pods */,
 				A8D615126285F8D59B332681 /* Frameworks */,
@@ -97,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				F430ED3528538B79004A8241 /* Quiz App.app */,
+				F401F41E28CDE68F00832823 /* Quiz-App-widgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +183,8 @@
 		F430ED3728538B79004A8241 /* Quiz App */ = {
 			isa = PBXGroup;
 			children = (
+				F401F41928CDE5DA00832823 /* Quiz App.entitlements */,
+				F46B6836285CA09D005BC4AC /* Files */,
 				F462138928574CB600E1BEAF /* View */,
 				F462138628574C1800E1BEAF /* GlobalState */,
 				F4A2C54928546D8300C404AE /* Data */,
@@ -142,6 +223,7 @@
 				F4D295902854C037002F4219 /* Questions */,
 				F4D295872854B6D4002F4219 /* Category */,
 				F430ED4A28539151004A8241 /* DataModal.swift */,
+				F4A9FCAA28CCE022005C57FB /* HighScore.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -158,8 +240,19 @@
 			isa = PBXGroup;
 			children = (
 				F462138A28574CC000E1BEAF /* LoadingIndicator.swift */,
+				F46B6834285CA067005BC4AC /* LottieView.swift */,
+				F46B6839285CA0DE005BC4AC /* LottieFileView.swift */,
+				F401F43428CDE6FC00832823 /* WidgetView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		F46B6836285CA09D005BC4AC /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				F46B6837285CA0AA005BC4AC /* passed.json */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 		F4A2C53E28545C6C00C404AE /* UIHelper */ = {
@@ -200,6 +293,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F401F41D28CDE68F00832823 /* Quiz-App-widgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F401F42F28CDE69000832823 /* Build configuration list for PBXNativeTarget "Quiz-App-widgetExtension" */;
+			buildPhases = (
+				F401F41A28CDE68F00832823 /* Sources */,
+				F401F41B28CDE68F00832823 /* Frameworks */,
+				F401F41C28CDE68F00832823 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Quiz-App-widgetExtension";
+			productName = "Quiz-App-widgetExtension";
+			productReference = F401F41E28CDE68F00832823 /* Quiz-App-widgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		F430ED3428538B79004A8241 /* Quiz App */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F430ED4328538B7C004A8241 /* Build configuration list for PBXNativeTarget "Quiz App" */;
@@ -209,10 +319,12 @@
 				F430ED3228538B79004A8241 /* Frameworks */,
 				F430ED3328538B79004A8241 /* Resources */,
 				C4409D68019E0C1EF64364FB /* [CP] Embed Pods Frameworks */,
+				F401F43228CDE69000832823 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F401F42D28CDE69000832823 /* PBXTargetDependency */,
 			);
 			name = "Quiz App";
 			productName = "Quiz App";
@@ -229,6 +341,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					F401F41D28CDE68F00832823 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					F430ED3428538B79004A8241 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -248,11 +363,21 @@
 			projectRoot = "";
 			targets = (
 				F430ED3428538B79004A8241 /* Quiz App */,
+				F401F41D28CDE68F00832823 /* Quiz-App-widgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F401F41C28CDE68F00832823 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F401F43728CDEAF900832823 /* Assets.xcassets in Resources */,
+				F401F42828CDE69000832823 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F430ED3328538B79004A8241 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +385,7 @@
 				F4A2C54B28546DA700C404AE /* data.json in Resources */,
 				F430ED4028538B7C004A8241 /* Preview Assets.xcassets in Resources */,
 				F462139128576AB200E1BEAF /* Launch Screen.storyboard in Resources */,
+				F46B6838285CA0AB005BC4AC /* passed.json in Resources */,
 				F430ED3D28538B7C004A8241 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,12 +435,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F401F41A28CDE68F00832823 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F401F43628CDE6FC00832823 /* WidgetView.swift in Sources */,
+				F4FB101028CDEF6500325094 /* DataModal.swift in Sources */,
+				F401F42A28CDE69000832823 /* Quiz_App_widget.intentdefinition in Sources */,
+				F401F42528CDE68F00832823 /* Quiz_App_widget.swift in Sources */,
+				F4FB101128CDEFDA00325094 /* HighScore.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F430ED3128538B79004A8241 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */,
 				F430ED3B28538B79004A8241 /* ContentView.swift in Sources */,
+				F401F42B28CDE69000832823 /* Quiz_App_widget.intentdefinition in Sources */,
+				F46B6835285CA067005BC4AC /* LottieView.swift in Sources */,
 				F462138828574C2900E1BEAF /* GlobalState.swift in Sources */,
 				F4D295942854C063002F4219 /* Questions.swift in Sources */,
 				F462138F28574F7600E1BEAF /* WelcomeScreen.swift in Sources */,
@@ -323,16 +463,82 @@
 				F430ED4828538BDA004A8241 /* QuizConfig.swift in Sources */,
 				F4D295932854C063002F4219 /* Results.swift in Sources */,
 				F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */,
+				F46B683A285CA0DE005BC4AC /* LottieFileView.swift in Sources */,
+				F4A9FCAB28CCE022005C57FB /* HighScore.swift in Sources */,
 				F430ED3928538B79004A8241 /* Quiz_AppApp.swift in Sources */,
 				F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */,
 				F4D2958F2854B6EF002F4219 /* CateGoryBase.swift in Sources */,
 				F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */,
+				F401F43528CDE6FC00832823 /* WidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F401F42D28CDE69000832823 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F401F41D28CDE68F00832823 /* Quiz-App-widgetExtension */;
+			targetProxy = F401F42C28CDE69000832823 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		F401F43028CDE69000832823 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Quiz-App-widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7UQB2ZQ66H;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quiz-App-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Quiz-App-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.girish.quizapp.Quiz-App.Quiz-App-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F401F43128CDE69000832823 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Quiz-App-widgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quiz-App-widget/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Quiz-App-widget";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.girish.quizapp.Quiz-App.Quiz-App-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F430ED4128538B7C004A8241 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -451,11 +657,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93DEE7F029515ADA69432963 /* Pods-Quiz App.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quiz App/Quiz App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quiz App/Preview Content\"";
+				DEVELOPMENT_TEAM = 7UQB2ZQ66H;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -482,8 +691,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C4258FEC2FE8711A2129016C /* Pods-Quiz App.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quiz App/Quiz App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quiz App/Preview Content\"";
@@ -512,6 +723,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F401F42F28CDE69000832823 /* Build configuration list for PBXNativeTarget "Quiz-App-widgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F401F43028CDE69000832823 /* Debug */,
+				F401F43128CDE69000832823 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F430ED3028538B79004A8241 /* Build configuration list for PBXProject "Quiz App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

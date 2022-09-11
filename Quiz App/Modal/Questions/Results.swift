@@ -17,8 +17,8 @@ struct Results : Codable {
 	let type : String?
 	let difficulty : String?
 	let question : String?
-	let correct_answer : String?
-	let incorrect_answers : [String]?
+	var correct_answer : String?
+    var incorrect_answers : [String]?
 
 	enum CodingKeys: String, CodingKey {
 

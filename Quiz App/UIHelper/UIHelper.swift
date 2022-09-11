@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import HTMLEntities
 
 struct RoundedRectangleButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -70,4 +71,21 @@ extension Image {
             .resizable()
             .scaledToFit()
     }
+}
+
+//extension Text {
+//    func textModifier() -> some View {
+//        self
+//            .resizable()
+//            .scaledToFit()
+//    }
+//}
+
+
+struct UIHelper {
+    
+    func formateHelptext(text: String) -> String {
+        return text.htmlUnescape()
+    }
+    
 }
