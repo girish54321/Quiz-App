@@ -17,6 +17,19 @@ struct WelcomeScreen: View {
     var body: some View {
         NavigationView {
             VStack {
+                Group {
+                    HStack {
+                    Text("Your Best score - ")
+                        Spacer()
+                        Text(appStateStorage.userScore.score)
+                            .foregroundColor(Color.indigo)
+                            .fontWeight(.heavy)
+                    }
+                }
+                .padding()
+                .font(.title)
+            
+                
                 NavigationLink(destination: QuizScreen(quiaData: quiaData), isActive: $isShowingDetailView) { EmptyView() }
                 Spacer()
                 NavigationLink(destination: QuizConfig()) {

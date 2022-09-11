@@ -135,3 +135,6 @@ let CategoryList: [Category] = [
         value: 32
     )
 ]
+
+
+let appStorageKey = "group.com.girish.quizapp.Quiz-App"

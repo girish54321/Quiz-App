@@ -18,6 +18,8 @@ struct QuizScreen: View {
     
     @Environment(\.presentationMode) var presentation
     
+    @EnvironmentObject var appStateStorage: AppStateStorage
+    
     var body: some View {
         VStack {
             if completed == false {
@@ -115,6 +117,9 @@ struct QuizScreen: View {
     func goToNextQuestion(withTimer: Bool = true){
         if(isLastQuestion()){
           DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+              let newHighScore = appStateStorage.userScore.scoreNumber + totalScore
+              let data = HighScore(score: "\(newHighScore)", scoreNumber: newHighScore)
+              appStateStorage.updateUserScore(data: data)
                 withAnimation {
                     disabled = true
                     completed = true

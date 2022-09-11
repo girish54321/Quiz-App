@@ -25,6 +25,7 @@
 		F4A2C54228545D0800C404AE /* QuizScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54128545D0800C404AE /* QuizScreen.swift */; };
 		F4A2C54828546D6E00C404AE /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */; };
 		F4A2C54B28546DA700C404AE /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = F4A2C54A28546DA700C404AE /* data.json */; };
+		F4A9FCAB28CCE022005C57FB /* HighScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A9FCAA28CCE022005C57FB /* HighScore.swift */; };
 		F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */; };
 		F4D2958F2854B6EF002F4219 /* CateGoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D2958D2854B6EF002F4219 /* CateGoryBase.swift */; };
 		F4D295932854C063002F4219 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D295912854C062002F4219 /* Results.swift */; };
@@ -53,6 +54,7 @@
 		F4A2C54128545D0800C404AE /* QuizScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizScreen.swift; sourceTree = "<group>"; };
 		F4A2C54728546D6E00C404AE /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		F4A2C54A28546DA700C404AE /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		F4A9FCAA28CCE022005C57FB /* HighScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScore.swift; sourceTree = "<group>"; };
 		F4D2958C2854B6EF002F4219 /* TriviaCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriviaCategories.swift; sourceTree = "<group>"; };
 		F4D2958D2854B6EF002F4219 /* CateGoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CateGoryBase.swift; sourceTree = "<group>"; };
 		F4D295912854C062002F4219 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				F4D295902854C037002F4219 /* Questions */,
 				F4D295872854B6D4002F4219 /* Category */,
 				F430ED4A28539151004A8241 /* DataModal.swift */,
+				F4A9FCAA28CCE022005C57FB /* HighScore.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				F4D295932854C063002F4219 /* Results.swift in Sources */,
 				F4A2C54028545C9600C404AE /* UIHelper.swift in Sources */,
 				F46B683A285CA0DE005BC4AC /* LottieFileView.swift in Sources */,
+				F4A9FCAB28CCE022005C57FB /* HighScore.swift in Sources */,
 				F430ED3928538B79004A8241 /* Quiz_AppApp.swift in Sources */,
 				F4D2958E2854B6EF002F4219 /* TriviaCategories.swift in Sources */,
 				F4D2958F2854B6EF002F4219 /* CateGoryBase.swift in Sources */,
