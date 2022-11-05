@@ -173,6 +173,7 @@ struct QuizScreen_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             QuizScreen()
+                .environmentObject(AppStateStorage())
         }
     }
 }

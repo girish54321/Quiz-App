@@ -105,6 +105,7 @@ struct QuizConfig_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             QuizConfig()
+                .environmentObject(AppStateStorage())
         }
     }
 }
