@@ -17,7 +17,7 @@
                BlueprintIdentifier = "5E6CF2DDC9E9C09050FB110C933854EB"
                BuildableName = "Pods_Quiz_App.framework"
                BlueprintName = "Pods-Quiz App"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

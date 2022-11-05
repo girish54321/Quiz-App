@@ -82,6 +82,7 @@ struct WelcomeScreen: View {
 struct WelcomeScreen_Previews: PreviewProvider {
     static var previews: some View {
         WelcomeScreen()
+            .environmentObject(AppStateStorage())
     }
 }
 

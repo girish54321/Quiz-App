@@ -17,7 +17,7 @@
                BlueprintIdentifier = "0B967D7F8561D42493EE289EC8D450D1"
                BuildableName = "Lottie.framework"
                BlueprintName = "lottie-ios"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
